@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x523a;&#x5ba2;&#x4fe1;&#x6761;&#x7cfb;&#x5217;&#x5206;&#x6790;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="刺客信条系列分析">刺客信条系列分析</h1>
+<p>---</p>
+<h2 id="一核心结论">一、核心结论</h2>
+<ul>
+<li>
+<p><strong>系列体量</strong>：累计销量约 2.3 亿份（截至 2025 年）；系列总收入超 150 亿美元（截至 2023 年）</p>
+<ul>
+<li>来源：Ubisoft 官方财报 / Statista 游戏销量数据库</li>
+</ul>
+</li>
+<li>
+<p><strong>三阶段演进</strong>：</p>
+<ul>
+<li>
+<p>第一阶段（2007–2015）：潜行动作，风格紧凑线性，代表作 AC2、黑旗</p>
+</li>
+<li>
+<p>第二阶段（2017–2023）：大型开放世界 RPG，等级成长 + 装备词条，平均时长 43h → 127h</p>
+<ul>
+<li>来源：How Long to Beat 数据库，多媒体报道综合</li>
+</ul>
+</li>
+<li>
+<p>第三阶段（2025–）：以《暗影》为起点，RPG 规模 + 强化潜行/跑酷，Animus Hub 平台化生态</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>核心矛盾</strong>：核心玩家要&quot;拟真刺客感&quot; vs 市场逻辑要&quot;更长留存+更多付费点&quot;，贯穿系列全程</p>
+</li>
+</ul>
+<p>---</p>
+<h2 id="二故事展开">二、故事展开</h2>
+<h3 id="21-双层叙事结构">2.1 双层叙事结构</h3>
+<ul>
+<li><strong>历史层</strong>：玩家扮演特定时代的祖先</li>
+<li><strong>现代层</strong>：通过 Animus 记忆回溯机器进入历史，主线对抗圣殿骑士-刺客兄弟会</li>
+<li>结构独创性高，但两层质量落差是长期争议焦点</li>
+</ul>
+<h3 id="22-各阶段叙事特点">2.2 各阶段叙事特点</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>现代层</th>
+<th>历史层</th>
+<th>代表角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一阶段</td>
+<td>连贯，以德斯蒙德为主线，AC3 收尾牺牲</td>
+<td>线性叙事，精准人物弧</td>
+<td>埃齐奥（AC2 三部曲）：少年→老练刺客，情感认同度最高</td>
+</tr>
+<tr>
+<td>第二阶段</td>
+<td>退居二线，被玩家视为&quot;打断沉浸感的累赘&quot;</td>
+<td>角色自主性更强但叙事更松散</td>
+<td>奥德赛双主角可选（卡珊德拉/亚历山德罗斯），选项影响有限，&quot;分叉后必然汇流&quot;</td>
+</tr>
+<tr>
+<td>第三阶段</td>
+<td>Animus Hub 重新整合，&quot;Vault&quot;世界观数据库</td>
+<td>双主角机制，叙事与玩法差异挂钩</td>
+<td>奈瑟（忍者）/ 安斯克（武士），功能差异内嵌叙事逻辑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-叙事质量锚点">2.3 叙事质量锚点</h3>
+<ul>
+<li><strong>最高峰</strong>：埃齐奥三部曲（AC2 / Brotherhood / Revelations）</li>
+<li><strong>最大争议</strong>：奥德赛&quot;假选择&quot;问题——对话选项多但主线结果固定</li>
+<li><strong>黑旗特例</strong>：爱德华·肯威弧线（自私→牺牲）与海战玩法高度融合，被视为&quot;非刺客题材意外成功&quot;</li>
+</ul>
+<p>---</p>
+<h2 id="三玩法演变">三、玩法演变</h2>
+<h3 id="31-玩法特点">3.1 玩法特点</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>核心体验</th>
+<th>失败惩罚</th>
+<th>战斗定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经典</td>
+<td>潜行接近→精准刺杀→全身而退</td>
+<td>失同步（游戏结束）</td>
+<td>次优解，打斗引起警报</td>
+</tr>
+<tr>
+<td>RPG</td>
+<td>探索世界→刷等级→打装备</td>
+<td>重试</td>
+<td>同等优先，可纯战士流通关</td>
+</tr>
+<tr>
+<td>暗影</td>
+<td>双角色互补，潜行/战斗自由切换</td>
+<td>RPG 体系下的重试</td>
+<td>角色锁定玩法偏好</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>游戏时长变化</strong>：RPG 化后平均时长从约 43h 提升至 127h，直接驱动后续商业化布局</p>
+<ul>
+<li>来源：How Long to Beat 数据库</li>
+</ul>
+</li>
+</ul>
+<h3 id="32-角色设计">3.2 角色设计</h3>
+<ul>
+<li>
+<p><strong>经典阶段</strong>：功能性为主；埃齐奥、爱德华·肯威是塑造完整的例外</p>
+</li>
+<li>
+<p><strong>RPG 阶段</strong>：强调玩家自定义 → 个性稀释；对话选项多但权重弱</p>
+</li>
+<li>
+<p><strong>暗影</strong>：双主角差异内嵌玩法，奈瑟（轻灵/潜行）vs 安斯克（重战/强攻），是系列首次将&quot;角色差异&quot;作为核心机制而非皮肤</p>
+<ul>
+<li>来源：IGN / Eurogamer 评测（2025 年 3 月）</li>
+</ul>
+</li>
+</ul>
+<h3 id="33-任务设计">3.3 任务设计</h3>
+<ul>
+<li>
+<p><strong>经典阶段</strong>：前置侦察 → 制定计划 → 执行刺杀 → 撤离；每任务是独立谜题；支线数量克制且关联主线</p>
+</li>
+<li>
+<p><strong>RPG 阶段</strong>：任务量爆炸，填充型支线（跑腿/清营/收集）比例高；等级门槛强制刷支线</p>
+<ul>
+<li>玩家反馈：&quot;英灵殿 160h 完成全内容，开始像工作&quot;</li>
+<li>来源：Reddit r/assassinscreed 高赞评论 / Eurogamer 深度评测</li>
+</ul>
+</li>
+<li>
+<p><strong>暗影改进</strong>：地图规模参照起源（约等于英灵殿的 1/3），主线约 30–50h，密度优先于数量</p>
+<ul>
+<li>来源：育碧官方开发者访谈（2025 年 2 月）</li>
+</ul>
+</li>
+</ul>
+<h3 id="34-玩法机制">3.4 玩法机制</h3>
+<h4 id="跑酷">跑酷</h4>
+<ul>
+<li>
+<p>经典：有限制的环境约束，需识别可攀爬路线，跑酷有技巧性</p>
+</li>
+<li>
+<p>RPG（起源/奥德赛）：几乎任何表面均可攀爬 → 失去节奏感</p>
+</li>
+<li>
+<p>暗影：重新收紧，奈瑟专属跑酷系统，流畅度为系列历史最高</p>
+<ul>
+<li>来源：Digital Foundry 技术分析（2025 年 3 月）</li>
+</ul>
+</li>
+</ul>
+<h4 id="战斗">战斗</h4>
+<ul>
+<li>
+<p>经典：反击为核心（格挡→暗杀），简单但风格统一</p>
+</li>
+<li>
+<p>RPG：技能树（猎人/战士/刺客三路）+ 装备词条（火/毒等元素）+ 招式连段；后期装备致难度崩坏</p>
+</li>
+<li>
+<p>暗影：装备系统保留，&quot;一击必杀&quot;模式完善，可选还原早期体验</p>
+<ul>
+<li>来源：IGN 评测（2025 年 3 月）</li>
+</ul>
+</li>
+</ul>
+<h4 id="侦察系统">侦察系统</h4>
+<ul>
+<li>
+<p>经典：传统鹰眼（主角视角透视）</p>
+</li>
+<li>
+<p>RPG：可飞行控制的鸟（起源→英灵殿）</p>
+</li>
+<li>
+<p>暗影：取消可控飞鸟，奈瑟恢复传统鹰眼，安斯克仅可观察标记 → 两角色信息不对等成为机制差异点</p>
+<ul>
+<li>来源：育碧《暗影》官方设计日志（2024 年）</li>
+</ul>
+</li>
+</ul>
+<h4 id="刺杀系统等级门槛问题">刺杀系统（等级门槛问题）</h4>
+<ul>
+<li>RPG 阶段核心缺陷：敌人血量与等级挂钩，低等级敌人无法一刀秒杀，破坏叙事合理性</li>
+<li>英灵殿：加入可选&quot;一击必杀&quot;难度项</li>
+<li>暗影：进一步完善该选项</li>
+</ul>
+<h3 id="35-界面设计">3.5 界面设计</h3>
+<ul>
+<li>
+<p><strong>经典阶段</strong>：极简 HUD（小地图 + 同步条 + 仇恨值），与&quot;隐匿&quot;主题一致</p>
+</li>
+<li>
+<p><strong>RPG 阶段</strong>：装备对比词条 + 任务追踪列表 + 技能冷却 + loot 提示；地图图标密集（&quot;Ubisoft 图标病&quot;在此系列最典型）</p>
+<ul>
+<li>育碧曾公开承认地图图标问题，来源：育碧 CEO Yves Guillemot 2023 年投资者会议</li>
+</ul>
+</li>
+<li>
+<p><strong>暗影改进</strong>：可调节 HUD 密度；Animus Hub 作为统一启动器整合跨作品成就与奖励</p>
+</li>
+</ul>
+<p>---</p>
+<h2 id="四商业化">四、商业化</h2>
+<h3 id="41-付费内容演变">4.1 付费内容演变</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>主要付费形式</th>
+<th>典型例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经典后期（Unity 起）</td>
+<td>Helix Credits 虚拟货币，购买外观/省时礼包</td>
+<td>—</td>
+</tr>
+<tr>
+<td>RPG 阶段</td>
+<td>Helix Credits + 季票（约 $40）+ 大型剧情 DLC×2</td>
+<td>起源季票附赠 500 Helix Credits；来源：育碧官方商店存档页面</td>
+</tr>
+<tr>
+<td>暗影阶段</td>
+<td>免费 Animus Hub Projects（通行证式）+ Helix Credits 付费外观商店</td>
+<td>双轨结构：免费留存奖励 + 付费美观</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>奥德赛微交易收入</strong>：较起源高出 170%</p>
+<ul>
+<li>来源：育碧 2018–2019 财年财报</li>
+</ul>
+</li>
+<li>
+<p><strong>付费内容扩张背景</strong>：RPG 化→超长游戏时长→玩家更愿意付费买&quot;快&quot;，形成正反馈</p>
+</li>
+</ul>
+<h3 id="42-付费方式">4.2 付费方式</h3>
+<ul>
+<li>
+<p><strong>买断制分层</strong>：标准版 → 豪华版（+$20–30，含独特道具/早期解锁）→ 终极版（含季票+全 DLC）→ 典藏版（含实体周边）</p>
+</li>
+<li>
+<p><strong>订阅制</strong>：Ubisoft+ 覆盖 100+ 款育碧游戏及 DLC</p>
+<ul>
+<li>来源：Ubisoft 官网 Ubisoft+ 产品页（2025 年）</li>
+<li>影响：英灵殿上 Xbox Game Pass 后&quot;玩家数&quot;与&quot;付费买断数&quot;开始分离，销量数字解读趋于复杂</li>
+</ul>
+</li>
+<li>
+<p><strong>Helix Credits 阶梯定价</strong>：购买量越大单价越低（利用批量折扣心理效应，推动大额单次购买）</p>
+</li>
+</ul>
+<h3 id="43-财务压力背景">4.3 财务压力背景</h3>
+<ul>
+<li>
+<p>育碧 2024–2025 财年净亏损约 1.59 亿欧元，净预订收入同比下降 20.5%</p>
+<ul>
+<li>来源：育碧 2024–2025 财年年报（2025 年 5 月）</li>
+</ul>
+</li>
+<li>
+<p>即使《暗影》口碑不错，也未能扭转公司整体财务颓势</p>
+</li>
+</ul>
+<p>---</p>
+<h2 id="五竞品分析">五、竞品分析</h2>
+<h3 id="51-竞品迁移路径">5.1 竞品迁移路径</h3>
+<ul>
+<li>第一阶段竞品：育碧内部 IP（孤岛惊魂、波斯王子），同类 TPS/动作游戏</li>
+<li>RPG 阶段竞品迁移至：<strong>《巫师 3》《塞尔达：荒野之息》《对马之魂》</strong></li>
+<li>《对马之魂》（2020）：实质上以&quot;比育碧更像育碧&quot;的产品抢占赛道——开放世界、跑酷、潜行、历史背景，但叙事和战斗更精</li>
+</ul>
+<h3 id="52-暗影vs对马之魂对比">5.2 《暗影》vs《对马之魂》对比</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>刺客信条：暗影</th>
+<th>对马之魂</th>
+<th>胜方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>潜行深度</td>
+<td>声音/光线/阴影/草地遮蔽全系统，敌人 AI 多维感知</td>
+<td>潜行为辅助，系统深度有限</td>
+<td>暗影</td>
+</tr>
+<tr>
+<td>战斗打磨</td>
+<td>后期装备致难度崩坏</td>
+<td>全程曲线流畅，克制不失衡</td>
+<td>对马</td>
+</tr>
+<tr>
+<td>跑酷/移动</td>
+<td>系列历史最流畅（奈瑟），双角色对比趣味</td>
+<td>流畅但无系统性跑酷机制</td>
+<td>暗影</td>
+</tr>
+<tr>
+<td>叙事/剧情</td>
+<td>刺杀对象列表结构松散，主线凝聚力弱</td>
+<td>剧情与玩法高度融合，弧线完整</td>
+<td>对马</td>
+</tr>
+<tr>
+<td>开放世界设计</td>
+<td>体量大，支线填充感强，图标密集</td>
+<td>风的引导 + 无图标探索，密度优先</td>
+<td>对马</td>
+</tr>
+<tr>
+<td>画面/技术</td>
+<td>写实画质 + 光追 + 动态季节系统，技术天花板</td>
+<td>浮世绘艺术风格，沉浸感强</td>
+<td>暗影（技术）</td>
+</tr>
+<tr>
+<td>付费结构</td>
+<td>买断 + DLC + Helix Credits 内购商店</td>
+<td>买断 + 单一扩展包，无内购货币</td>
+<td>对马（简洁）</td>
+</tr>
+<tr>
+<td>Metacritic 均分</td>
+<td>82 分</td>
+<td>83 分</td>
+<td>基本持平</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>来源：Metacritic（2025 年 3 月数据）；各主流媒体评测</li>
+</ul>
+<h3 id="53-本质差异">5.3 本质差异</h3>
+<ul>
+<li><strong>设计哲学</strong>：&quot;大 vs 精&quot;——暗影追求感官刺激 + 系统多样性 + 可反复消费内容密度；对马追求叙事统一性与情感沉淀</li>
+<li><strong>商业逻辑</strong>：对马是索尼第一方闭合产品（精品一锤），暗影是育碧 IP 平台化生态入口（留存为先）</li>
+<li><strong>行业评语</strong>：有评论者将对马比作黑泽明，暗影比作昆汀·塔伦蒂诺——前者注重语言统一与情感深度，后者注重感官体验与内容密度</li>
+</ul>
+<p>---</p>
+<h2 id="六腾讯收购">六、腾讯收购</h2>
+<h3 id="61-时间线">6.1 时间线</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>关键数字</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018 年</td>
+<td>腾讯首次入股 5%，抵御维旺迪恶意收购</td>
+<td>育碧市值约 60 亿欧元</td>
+<td>育碧官方公告</td>
+</tr>
+<tr>
+<td>2022 年</td>
+<td>二次增持：以 3 亿欧元收购 Guillemot 家族控股公司 49% 股权</td>
+<td>直接+间接共持约 17% 育碧股份，无董事会投票权</td>
+<td>育碧官方公告 / FT 报道</td>
+</tr>
+<tr>
+<td>2024 年 Q3</td>
+<td>《暗影》宣布跳票，育碧股价单日暴跌 61.68%</td>
+<td>全年净预订收入预期从 5 亿欧元下调至 3.5 亿欧元</td>
+<td>育碧 2024 财年 Q3 财务更新；彭博社报道</td>
+</tr>
+<tr>
+<td>2024 年 Q4</td>
+<td>激进投资者 AJ Investments（持股 &lt;1%）公开呼吁出售或私有化</td>
+<td>—</td>
+<td>FT 报道（2024 年 11 月）</td>
+</tr>
+<tr>
+<td>2025 年 3 月 27 日</td>
+<td>结构性重组：拆分三大 IP 成立子公司，腾讯注资</td>
+<td>腾讯以 11.6 亿欧元（约 91 亿人民币）获 25% 股权；子公司估值 40 亿欧元</td>
+<td>育碧官方新闻稿（2025 年 3 月 27 日）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-交易设计">6.2 交易设计</h3>
+<ol>
+<li>
+<p><strong>财务目的</strong>：注资用于偿债 + 充实运营资金；信号效应令育碧股价次日盘后上涨近 14%</p>
+<ul>
+<li>来源：Bloomberg / Reuters 市场报道（2025 年 3 月 28 日）</li>
+</ul>
+</li>
+<li>
+<p><strong>控制权保护</strong>：</p>
+<ul>
+<li>育碧保留子公司 75% 投票权，腾讯仅获 1 席无表决权观察员席位</li>
+<li>八年锁定期，腾讯不得进一步增持或获取否决权</li>
+<li>Guillemot 家族双重股权结构保持完整</li>
+<li>来源：育碧官方新闻稿 + Eurogamer / <a href="http://GamesIndustry.biz">GamesIndustry.biz</a> 分析（2025 年 3 月）</li>
+</ul>
+</li>
+<li>
+<p><strong>IP 价值变现</strong>：双方目标均指向 GaaS 化、免费游玩入口和社交功能整合</p>
+<ul>
+<li>腾讯总裁刘炽平公开表述：&quot;打造长期常青游戏平台&quot;</li>
+<li>来源：育碧 x 腾讯联合声明（2025 年 3 月 27 日）</li>
+</ul>
+</li>
+</ol>
+<h3 id="63-腾讯策略">6.3 腾讯策略</h3>
+<ul>
+<li>
+<p><strong>广撒网策略</strong>：高价值目标控股或全资（Riot Games、Supercell）；潜力目标少数股权（育碧、动视暴雪、Roblox、Epic Games）</p>
+<ul>
+<li>来源：Newzoo / <a href="http://GamesIndustry.biz">GamesIndustry.biz</a> 腾讯投资版图追踪（2024 年）</li>
+</ul>
+</li>
+<li>
+<p><strong>&quot;先技术后 IP&quot;渗透路径</strong>：育碧案例中，2023 年腾讯代理《全境封锁 2》国服（DAU 经社交裂变提升 37%）；2024 年联合开发《彩虹六号手游》</p>
+<ul>
+<li>来源：育碧中国合作公告 / 腾讯年报（2023–2024）</li>
+</ul>
+</li>
+<li>
+<p><strong>规避反垄断</strong>：三大 IP 独立子公司结构，被分析师解读为规避欧盟反垄断审查的&quot;曲线控制&quot;设计</p>
+<ul>
+<li>来源：Benchmark 分析师报告（2025 年 4 月）</li>
+</ul>
+</li>
+</ul>
+<p>---</p>
+<h2 id="附录数据引用">附录：数据引用</h2>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系列累计销量</td>
+<td>~2.3 亿份（2025 年）</td>
+<td>Ubisoft 官方财报 / Statista</td>
+</tr>
+<tr>
+<td>系列总收入</td>
+<td>&gt;150 亿美元（截至 2023 年）</td>
+<td>Ubisoft 年报综合</td>
+</tr>
+<tr>
+<td>英灵殿销量（历史最高）</td>
+<td>~2500 万份</td>
+<td>Ubisoft 2021 财年报告</td>
+</tr>
+<tr>
+<td>英灵殿占育碧当年总收入比</td>
+<td>约 42%</td>
+<td>Ubisoft 2021 财年报告</td>
+</tr>
+<tr>
+<td>奥德赛微交易收入 vs 起源</td>
+<td>高 170%</td>
+<td>Ubisoft 2018–2019 财年财报</td>
+</tr>
+<tr>
+<td>平均游戏时长变化（经典→RPG）</td>
+<td>43h → 127h</td>
+<td>How Long to Beat 数据库</td>
+</tr>
+<tr>
+<td>幻景销量（估计）</td>
+<td>~500 万份</td>
+<td>第三方数据综合（VGChartz / Circana）</td>
+</tr>
+<tr>
+<td>暗影早期销量</td>
+<td>~500 万份以上（上线首月）</td>
+<td>育碧 2025 Q1 财务更新</td>
+</tr>
+<tr>
+<td>育碧 2024–2025 净亏损</td>
+<td>约 1.59 亿欧元</td>
+<td>育碧 2024–2025 财年年报</td>
+</tr>
+<tr>
+<td>育碧净预订收入降幅</td>
+<td>同比 -20.5%</td>
+<td>育碧 2024–2025 财年年报</td>
+</tr>
+<tr>
+<td>股价暴跌（2024 年跳票当日）</td>
+<td>单日 -61.68%</td>
+<td>Bloomberg / Reuters（2024 年 9 月）</td>
+</tr>
+<tr>
+<td>腾讯注资金额</td>
+<td>11.6 亿欧元（约 91 亿人民币）</td>
+<td>育碧官方新闻稿（2025 年 3 月 27 日）</td>
+</tr>
+<tr>
+<td>子公司估值</td>
+<td>40 亿欧元</td>
+<td>育碧官方新闻稿（2025 年 3 月 27 日）</td>
+</tr>
+<tr>
+<td>腾讯获得股权比例</td>
+<td>25%（无投票权）</td>
+<td>育碧官方新闻稿（2025 年 3 月 27 日）</td>
+</tr>
+<tr>
+<td>暗影 Metacritic 均分</td>
+<td>82 分</td>
+<td>Metacritic（2025 年 3 月）</td>
+</tr>
+<tr>
+<td>对马之魂 Metacritic 均分</td>
+<td>83 分</td>
+<td>Metacritic</td>
+</tr>
+</tbody>
+</table>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
